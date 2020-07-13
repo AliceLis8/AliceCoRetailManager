@@ -11,7 +11,8 @@ namespace ARMDesktopUI.ViewModels
     public class SalesViewModel : Screen
     {
         private BindingList<string> _products;
-        private string _itemQuantity;
+        private int _itemQuantity;
+        private BindingList<string> _cart;
 
         public BindingList<string> Products
         {
@@ -22,8 +23,7 @@ namespace ARMDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => Products);
             }
         }
-
-        private BindingList<string> _cart;
+        
         public BindingList<string> Cart
         {
             get { return _cart; }
@@ -34,13 +34,13 @@ namespace ARMDesktopUI.ViewModels
             }
         }
 
-        public string ItemQuantity
+        public int ItemQuantity
         {
             get { return _itemQuantity; }
             set
             {
                 _itemQuantity = value;
-                NotifyOfPropertyChange(() => Products);
+                NotifyOfPropertyChange(() => ItemQuantity);
             }
         }
 
