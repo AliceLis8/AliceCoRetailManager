@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Security.Permissions;
 using System.Text;
@@ -14,5 +15,6 @@ namespace ARMDataManager.Library.Models
         public string Discription { get; set; }
         public decimal RetailPrice { get; set; }
         public int QuantityInStock { get; set; }
+        public bool IsTaxable { get; set; }      
     }
 }
