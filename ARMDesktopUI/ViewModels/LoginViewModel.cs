@@ -12,10 +12,9 @@ namespace ARMDesktopUI.ViewModels
 {
     public class LoginViewModel : Screen
     {
-        private string _userName;
-        private string _password;
+        private string _userName = "alice@lis.com";
+        private string _password = "Pwd12345.";
         private IAPIHelper _apiHelper;
-        private string _errorMessage;
         private IEventAggregator _events;
 
         public LoginViewModel(IAPIHelper apiHelper, IEventAggregator events)
@@ -58,7 +57,7 @@ namespace ARMDesktopUI.ViewModels
                 return output;
             }
         }
-
+        private string _errorMessage;
         public string ErrorMessage
         {
             get { return _errorMessage; }
