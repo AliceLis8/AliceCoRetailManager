@@ -29,5 +29,10 @@ namespace ARMDesktopUI.Views
         {
 
         }
+
+        private void RemoveFromCard_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
