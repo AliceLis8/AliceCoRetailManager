@@ -64,6 +64,18 @@ namespace ARMDesktopUI.ViewModels
             }
         }
 
+        private async Task ResetSalesViewModel()
+        {
+            Cart = new BindingList<CartItemDisplayModel>();
+            // TODO - Add clearing the selectedCartItem if it does not it itself
+            await LoadProducts();
+
+            NotifyOfPropertyChange(() => SubTotal);
+            NotifyOfPropertyChange(() => Tax);
+            NotifyOfPropertyChange(() => Total);
+            NotifyOfPropertyChange(() => CanCheckOut);
+        }
+
         private CartItemDisplayModel _selectedCartItem;
         public CartItemDisplayModel SelectedCartItem
         {
@@ -172,10 +184,7 @@ namespace ARMDesktopUI.ViewModels
 
             if (existingItem != null)
             {
-                existingItem.QuantityInCart += ItemQuantity;
-                ////HACK - There should be a better way of refreshing the cart display
-                //Cart.Remove(existingItem);
-                //Cart.Add(existingItem);
+                existingItem.QuantityInCart += ItemQuantity;                
             }
             else
             {
@@ -201,7 +210,7 @@ namespace ARMDesktopUI.ViewModels
             {
                 bool output = false;
                 // Make sure something is selected    
-                if (SelectedCartItem != null && SelectedCartItem?.Product.QuantityInStock > 0)
+                if (SelectedCartItem != null && SelectedCartItem?.QuantityInCart > 0)
                 {
                     output = true;
                 }
@@ -216,8 +225,6 @@ namespace ARMDesktopUI.ViewModels
             if (SelectedCartItem.QuantityInCart > 1)
             {
                 SelectedCartItem.QuantityInCart -= 1;
-
-
             }
             else
             {
@@ -228,6 +235,7 @@ namespace ARMDesktopUI.ViewModels
             NotifyOfPropertyChange(() => Tax);
             NotifyOfPropertyChange(() => Total);
             NotifyOfPropertyChange(() => CanCheckOut);
+            NotifyOfPropertyChange(() => CanAddToCart);
         }
 
         public bool CanCheckOut
@@ -258,6 +266,8 @@ namespace ARMDesktopUI.ViewModels
                 });
             }
             await _saleEndpoint.PostSale(sale);
+
+            await ResetSalesViewModel();
         }
     }
 }
