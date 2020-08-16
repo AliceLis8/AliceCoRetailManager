@@ -62,7 +62,6 @@ namespace ARMDesktopUI.ViewModels
                 }
                
                 TryClose();
-
             }
         }
         private async Task LoadProducts()
