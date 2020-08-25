@@ -27,14 +27,6 @@ namespace ARMDataManager.Controllers
         [Route("GetSalesReport")]
         public List<SaleReportModel> GetSaleReport()
         {
-            //if (RequestContext.Principal.IsInRole("Admin"))
-            //{
-            //    //Do admin stuff
-            //}
-            //else if (RequestContext.Principal.IsInRole("Manager"))
-            //{
-            //    //Do manager stuff
-            //}
             SaleData data = new SaleData();
             return data.GetSaleReport();
         }
