@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using Dapper;
-using System.ComponentModel.Design;
+using Microsoft.Extensions.Configuration;
 
 namespace ARMDataManager.Library.Internal.DataAccess
 {
     internal class SqlDataAccess : IDisposable
     {
+        private readonly IConfiguration _config;
+        public SqlDataAccess(IConfiguration config)
+        {
+            _config = config;
+        }
         public string GetConnectionString(string name)
         {
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
+            return _config.GetConnectionString(name);                    
         }
         public List<T> LoadData<T, U>(string storedProcedure, U parameters, string connectionStringName)
         {
