@@ -11,7 +11,8 @@ namespace ARMDataManager.Library.DataAccess
 {
     public class InventoryData
     {
-        private readonly IConfiguration _config;
+        private readonly IConfiguration _config;              
+
         public InventoryData(IConfiguration config)
         {
             _config = config;

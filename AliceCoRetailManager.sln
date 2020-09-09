@@ -9,9 +9,9 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ARMData", "ARMData\ARMData.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMDesktopUI", "ARMDesktopUI\ARMDesktopUI.csproj", "{F5B0B662-34F8-4C82-A318-B43185C30B01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMDataManager.Library", "ARMDataManager.Library\ARMDataManager.Library.csproj", "{934F7A41-CA8E-4768-9022-5818A8CAA018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ARMDataManager.Library", "ARMDataManager.Library\ARMDataManager.Library.csproj", "{934F7A41-CA8E-4768-9022-5818A8CAA018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMDesktopUI.Library", "ARMDesktopUI.Library\ARMDesktopUI.Library.csproj", "{33782C11-1955-4739-80E0-97C8218EBF1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ARMDesktopUI.Library", "ARMDesktopUI.Library\ARMDesktopUI.Library.csproj", "{33782C11-1955-4739-80E0-97C8218EBF1D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{25BB5537-5551-4320-B301-6164709E5D68}"
 EndProject
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{02F3FC09-D62
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{6CDD9DDA-64CE-40F4-B133-0068664C1A33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMApi", "ARMApi\ARMApi.csproj", "{F4922BDC-399C-4235-B8BD-F193BFE1B79D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ARMApi", "ARMApi\ARMApi.csproj", "{F4922BDC-399C-4235-B8BD-F193BFE1B79D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

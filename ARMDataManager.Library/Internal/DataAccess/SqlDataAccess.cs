@@ -17,7 +17,7 @@ namespace ARMDataManager.Library.Internal.DataAccess
             _config = config;
         }
         public string GetConnectionString(string name)
-        {
+        {           
             return _config.GetConnectionString(name);                    
         }
         public List<T> LoadData<T, U>(string storedProcedure, U parameters, string connectionStringName)

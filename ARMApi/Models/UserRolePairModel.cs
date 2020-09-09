@@ -9,5 +9,8 @@ namespace ARMApi.Models
     {
         public string UserId { get; set; }
         public string RoleName { get; set; }
+        //public string UserRoles { get; set; }
+        //public string Roles { get; set; }
+
     }
 }
